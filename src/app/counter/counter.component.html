@@ -1,0 +1,17 @@
+<div style="display: flex; flex-direction: row; width: 100%;">
+  <div style="flex: 1 0 auto; background-color: #ffffff2a; position: relative;"
+       [style.height]="height + 'px'">
+    <img *ngFor="let item of currentNumberArray; let index = index"
+         [src]="potatoes[index]"
+         class="potato"
+         [style.bottom]="item.top + '%'"
+         [style.left]="item.left + '%'"
+         [style.height]="tileSize + 'px'"
+         [style.width]="tileSize + 'px'"
+         [style.position]="'absolute'"
+         [style.scale]="2.5 - getLevel(index) * 0.12"
+         [style.rotate]="rotations[index] + 'deg'"
+         [style.filter]="dropShadows[index]"
+         alt="potato"/>
+  </div>
+</div>
